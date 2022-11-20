@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==========================   Unicorns  =============================== -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <!-- ==========================  Swiper CSS  ============================== -->
+  <link rel="stylesheet" href="./statics/styles/swiper-bundle.min.css">
+
+  <!-- ==============================  CSS  ================================= -->
+  <link rel="stylesheet" href="./statics/styles/styles.css">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  
+  <!-- ===========================   header   ================================ -->
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Sachin</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">
+              <i class="uil uil-estate nav__icon"></i> Home
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#about" class="nav__link">
+              <i class="uil uil-user nav__icon"></i> About
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">
+              <i class="uil uil-file-info-alt nav__icon"></i> Skills
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#qualification" class="nav__link">
+              <i class="uil uil-graduation-cap nav__icon"></i> Education
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#portfolio" class="nav__link">
+              <i class="uil uil-scenery nav__icon"></i> Portfolio
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">
+              <i class="uil uil-message nav__icon"></i> Contact me
+            </a>
+          </li>
+
+        </ul>
+
+        <i class="uil uil-times nav__close" id="nav-close"></i> 
+      </div>
+      
+      <div class="nav__btns">
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="uil uil-apps"></i> 
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+
+
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <div class="home__content grid">
+          <div class="home__social">
+
+            <a href="https://www.linkedin.com/in/sachin-mandal-2a894820a/" class="home__social-icon">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+
+            <a href="https://github.com/sachin-cse" class="home__social-icon">
+              <i class="uil uil-github-alt"></i>
+            </a>
+
+          </div>
+
+          <div class="home__img">
+            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0" mask-type="alpha">
+                  <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                  130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                  97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                  0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+              </mask>
+              <g mask="url(#mask0)">
+                  <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                  165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                  129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                  -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                  <image class="home__blob-img" xlink:href="statics/assets/sachin_mandal.jpeg"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="home__date">
+            <h1 class="home__title">
+              Hi, I'am Sachin
+            </h1>
+            <h3 class="home__subtitle">
+              Full Stack developer
+            </h3>
+            <p class="home__description">
+              Proficient in building full stack websites 
+              , enjoys practice coding and
+              learning about new data structures and algorithms.
+            </p>
+            <a href="#contact" class="button button--flex">
+              Contact me <i class="uil uil-message button__icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="home__scroll">
+          <a href="#about" class="home__scroll-button button--flex">
+            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+            <span class="home__scroll name">Scroll down</span>
+            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+      <h2 class="section__title">About me</h2>
+      <span class="section__subtitle">My introduction</span>
+
+      <div class="about__container container grid">
+        <img src="statics/assets/sachin_mandal.jpeg" alt="" class="about__img">
+
+        <div class="about__data">
+          <p class="about__description">
+            I am a web-developer proficient in developing and designing databases,
+            well versed in data structures and algorithms, solving complicated problems, 
+            creating user interfaces, troubleshooting simple/complex issues, and 
+            implementing new features based on user feedback.
+          </p>
+
+          <div class="about__info">
+            <div>
+              <span class="about__info-title">7+</span>
+              <span class="about__info-name">Projects <br> built</span>
+            </div>
+          </div>
+
+          <div class="about__buttons">
+            <a download="" href="./statics/assets/Ritesh's Resume.pdf" class="button button--flex">
+              Download CV <i class="uil uil-download-alt button__icon"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!--==================== SKILLS ====================-->
+    <section class="skills" id="skills">
+      <h2 class="section__title">
+        Skills
+      </h2>
+
+      <span class="section__subtitle">
+        Technologies I am proficient in
+      </span>
+
+      <div class="skills__container container grid">
+
+        <div>
+          <div class="skills__content skills__open">
+            <div class="skills__header">
+              <i class="uil uil-brackets-curly skills__icon"></i>
+
+              <div>
+                <h1 class="skills__title">Frontend</h1>
+              </div>
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+
+            <div class="skills__list grid">
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">HTML</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_html"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">CSS</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_css"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">JavaScript</h3>
+                  <span class="skills__number">70%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_js"></span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+    
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <i class="uil uil-server-network-alt skills__icon"></i>
+
+              <div>
+                <h1 class="skills__title">Backend</h1>
+              </div>
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+
+            <div class="skills__list grid">
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Python</h3>
+                  <span class="skills__number">100%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_py"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Django</h3>
+                  <span class="skills__number">100%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_django"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">C</h3>
+                  <span class="skills__number">100%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_c"></span>
+                </div>
+              </div>
+
+              <!-- <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">C++</h3>
+                  <span class="skills__number">100%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_cpp"></span>
+                </div>
+              </div> -->
+
+              <!-- <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Java</h3>
+                  <span class="skills__number">95%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_java"></span>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <i class="uil uil-database skills__icon"></i>
+
+              <div>
+                <h1 class="skills__title">Database</h1>
+              </div>
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+
+            <div class="skills__list grid">
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">MySQL</h3>
+                  <span class="skills__number">100%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_mysql"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">SQLite3</h3>
+                  <span class="skills__number">100%</span>
+                </div>
+                
+                <div class="skills__bar">
+                  <span class="skills__percentage skills_sqlite"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+              <div class="skills__content skills__close">
+                <div class="skills__header">
+                  <i class="uil uil-server-connection skills__icon"></i>
+    
+                  <div>
+                    <h1 class="skills__title">Technologies</h1>
+                  </div>
+                  <i class="uil uil-angle-down skills__arrow"></i>
+                </div>
+    
+                <div class="skills__list grid">
+    
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">GIT</h3>
+                      <span class="skills__number">80%</span>
+                    </div>
+                    
+                    <div class="skills__bar">
+                      <span class="skills__percentage skills_mysql"></span>
+                    </div>
+                  </div>
+    
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">GITHUB</h3>
+                      <span class="skills__number">80%</span>
+                    </div>
+                    
+                    <div class="skills__bar">
+                      <span class="skills__percentage skills_sqlite"></span>
+                    </div>
+                  </div>
+                </div>
+
+            
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <!--==================== Experience ====================-->
+    <section class="qualification" id="work" style="margin-bottom: 40px">
+      <h2 class="section__title">Experience</h2>
+
+      <div class="qualification__container container">
+        <div class="qualification__tabs">
+          <div class="qualification__button button--flex qualification__active" data-target="#education">
+            <i class="uil uil-suitcase-alt"></i> Work
+          </div>
+        </div>
+
+        <div class="qualification__sections">
+          <div class="qualification__content qualification__active" data-content id="education">
+
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Full Stack Developer Intern</h3>
+                <span class="qualification__subtitle"><a href="https://www.enablecap.in/">EnableCap</a></span>
+                <div class="qualification__calender"> 
+                  <i class="uil uil-calendar-alt"></i>
+                  2022-Present
+                </div>
+              </div>
+  
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+              
+              
+
+          </div>
+          <div class="qualification__data">
+            <div>
+              <h3 class="qualification__title">Full Stack Developer</h3>
+              <span class="qualification__subtitle"><a href="https://digitute.in/">Digitute</a></span>
+              <div class="qualification__calender"> 
+                <i class="uil uil-calendar-alt"></i>
+                July 2021-Sept 2021
+              </div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
+            
+            
+
+        </div>
+        </div>
+        
+      
+      </div>
+
+    </section>
+
+
+    <!--==================== QUALIFICATION ====================-->
+    <section class="qualification" id="qualification">
+      <h2 class="section__title">Qualification</h2>
+
+      <div class="qualification__container container">
+        <div class="qualification__tabs">
+          <div class="qualification__button button--flex qualification__active" data-target="#education">
+            <i class="uil uil-graduation-cap qualification__icon"></i>
+             Education
+          </div>
+        </div>
+
+        <div class="qualification__sections">
+          <div class="qualification__content qualification__active" data-content id="education">
+  
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">B.Tech</h3>
+                <p>Computer Science and Engineering</p>
+                <br>
+                <span class="qualification__subtitle">Bankura Unnayani Institute of Engineering</span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2019-Present
+                </div>
+              </div>
+  
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+  
+            <!-- <div class="qualification__data">
+              <div></div>
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+  
+              <div>
+                <h3 class="qualification__title">Algorithms for Searching, Sorting, and Indexing</h3>
+                <span class="qualification__subtitle"><a href="https://coursera.org/share/fa52c8b7c65f6095f7638408ac052f5a">Coursera</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2021
+                </div>
+              </div>
+            </div>
+  
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Trees and Graphs: Basics</h3>
+                <span class="qualification__subtitle"><a href="https://coursera.org/share/8dbb1ff2cb85ec3ef1e1fcfd3f11ec52">Coursera</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+  
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+  
+            <div class="qualification__data">
+              <div></div>
+  
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+  
+              <div>
+                <h3 class="qualification__title">Programming in Java</h3>
+                <span class="qualification__subtitle"><a href="https://archive.nptel.ac.in/content/noc/NOC20/SEM2/Ecertificates/106/noc20-cs58/Course/NPTEL20CS58S62300022144701.jpg">NPTEL</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2020
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Data Structures and Algorithms: Deep Dive Using Java </h3>
+                <span class="qualification__subtitle"><a href="https://www.udemy.com/certificate/UC-8f1fefea-e4c9-4eca-9e61-045e47f517e4/">Udemy</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2021
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+
+
+            <div class="qualification__data">
+              <div></div>
+  
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+  
+              <div>
+                <h3 class="qualification__title">Problem Solving (Intermediate)</h3>
+                <span class="qualification__subtitle"><a href="https://www.hackerrank.com/certificates/171400646e56">HackerRank</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+            </div>
+
+
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Python (Basic)</h3>
+                <span class="qualification__subtitle"><a href="https://www.hackerrank.com/certificates/21c41ffcdbeb">HackerRank</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+
+
+            <div class="qualification__data">
+              <div></div>
+  
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+  
+              <div>
+                <h3 class="qualification__title">SQL (Advanced)</h3>
+                <span class="qualification__subtitle"><a href="https://www.hackerrank.com/certificates/52d40655abea">HackerRank</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+            </div>
+
+
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">SQL (Intermediate)</h3>
+                <span class="qualification__subtitle"><a href="https://www.hackerrank.com/certificates/cb7da09fbf39">HackerRank</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+
+            
+            <div class="qualification__data">
+              <div></div>
+  
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+  
+              <div>
+                <h3 class="qualification__title">SQL (Basic)</h3>
+                <span class="qualification__subtitle"><a href="https://www.hackerrank.com/certificates/83ee0fd8d255">HackerRank</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+            </div>
+
+
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">Problem Solving (Basic)</h3>
+                <span class="qualification__subtitle"><a href="https://www.hackerrank.com/certificates/2c7b0baa2973">HackerRank</a></span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2022
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+ -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==================== PORTFOLIO ====================-->
+    <section class="portfolio section" id="portfolio">
+      <h2 class="section__title">Portfolio</h2>
+      <span class="section__subtitle">Most recent works</span>
+      
+      <div class="portfolio__container container swiper-container">
+
+        <div class="swiper-wrapper">
+
+          <div class="portfolio__content grid swiper-slide">
+            <img src="./statics/assets/crud.png" alt="" class="portfolio__img">
+            
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Develop Crud Operation in Django</h3>
+              <p class="portfolio__description">
+                A Responsive crud Project Built with HTML, CSS, PYTHON and DJANGO.
+              </p>
+              <!-- <a href="https://quizzical-wozniak-10263c.netlify.app/" class="button button--flex button--small portfolio__button">
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a> -->
+              <a href="https://github.com/sachin-cse/Django_crud-project" class="button button--flex button--small portfolio__button">
+                Code
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio__content grid swiper-slide">
+            <img src="./statics/assets/django_user.jpeg" alt="" class="portfolio__img">
+            
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Develop User Authentication System in Django</h3>
+              <p class="portfolio__description">
+                Developed user authentication system with HTML, CSS, PYTHON and DJANGO.
+              </p>
+              <!-- <a href=" https://objective-curran-ea189b.netlify.app/" class="button button--flex button--small portfolio__button">
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a> -->
+              <a href="https://github.com/sachin-cse/Django_authentication_project" class="button button--flex button--small portfolio__button">
+                Code
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="swiper-button-next">
+          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+        </div>
+
+        <div class="swiper-button-prev">
+          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </section>
+
+
+    <!--==================== CONTACT ME ====================-->
+    <section class="contact" id="contact">
+      <h2 class="section__title">Contact Me</h2>
+      <span class="section__subtitle">Get in touch</span>
+      
+      <div class="contact__container container grid">
+        <div>
+          <div class="contact__information">
+            <i class="uil uil-phone contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Call Me</h3>
+              <span class="contact__subtitle">(91)8318232814</span>
+            </div>
+          </div>
+
+          <div class="contact__information">
+            <i class="uil uil-envelope contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Email</h3>
+              <span class="contact__subtitle"><p><a href="mailto:mandalsachin725@gmail.com">mandalsachin725@gmail.com</a></p></span>
+            </div>
+          </div>
+
+          <div class="contact__information">
+            <a href="https://github.com/sachin-cse">
+              <i class="uil uil-github-alt contact__icon"></i>
+            </a>
+
+            <div>
+              <h3 class="contact__title">Github</h3>
+              <span class="contact__subtitle">sachin-cse</span>
+            </div>
+          </div>
+
+          <div class="contact__information">
+            <a href="https://www.linkedin.com/in/sachin-mandal-2a894820a/">
+              <i class="uil uil-linkedin-alt contact__icon"></i>
+            </a>
+
+            <div>
+              <h3 class="contact__title">Linkdin</h3>
+              <span class="contact__subtitle">Sachin Mandal</span>
+            </div>
+          </div>
+
+          <div class="contact__information">
+            <i class="uil uil-map-marker contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Location</h3>
+              <span class="contact__subtitle">India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <h1 class="footer__title">Sachin</h1>
+          <span class="footer__subtitle">Full Stack developer</span>
+        </div>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#skills" class="footer__link">Skills</a>
+          </li>
+          <li>
+            <a href="#education" class="footer__link">Education</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="footer__link">Portfolio</a>
+          </li>
+        </ul>
+
+        <div class="footer__socials">
+          <a href="https://github.com/sachin-cse" class="footer__social">
+            <i class="uil uil-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/sachin-mandal-2a894820a/" class="footer__social">
+            <i class="uil uil-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <p class="footer__copy">&#169; Built by <a href="" class="footer__link">sachin-cse</a></p>
+    </div>
+  </footer>
+
+
+  <!--==================== SCROLL TOP ====================-->
+  <a href="#home" class="scroll__up" id="scroll-up">
+    <i class="uil uil-arrow-up scrollup__icon"></i>
+  </a>
+
+  <!--==================== SWIPER JS ====================-->
+  <script src="./statics/scripts/swiper-bundle.min.js"></script>
+
+  <!--==================== MAIN JS ====================-->
+  <script src="./statics/scripts/main.js"></script>
+
+</body>
+</html>
