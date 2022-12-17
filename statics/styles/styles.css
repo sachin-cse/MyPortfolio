@@ -511,28 +511,56 @@ img {
 }
 
 .skills_python {
-    width: 100%;
+    width: 80%;
 }
 
 .skills__c {
-    width: 100%;
+    width: 75%;
 }
 
-.skills_cpp {
-    width: 100%;
+.skills_p{
+    width:60%;
 }
 
-.skills_java {
+.skills_ds{
+    width:70%;
+}
+
+/* .skills_cpp {
+    width: 100%;
+} */
+
+/* .skills_java {
     width: 95%;
-}
+} */
 
 
 .skills_mysql {
-    width: 100%;
+    width: 80%;
 }
 
 .skills_sqlite {
-    width: 100%;
+    width: 80%;
+}
+
+.skills_py{
+    width:80%
+}
+
+.skills_django{
+    width:80%;
+}
+
+.skills_git{
+    width:80%;
+}
+
+.skills_github{
+    width:80%;
+}
+
+.skills_klinux{
+    width:70%;
 }
 
 .skills__close .skills__list {
