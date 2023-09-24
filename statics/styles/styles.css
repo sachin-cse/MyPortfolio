@@ -1068,3 +1068,69 @@ img {
         right: 3.5rem;
     }
 }
+
+.about__buttons a.button {
+    margin-right: 10px; /* Adjust the value to control the spacing */
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--first-color); /* Blue color, you can change this */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* font-weight:300; */
+    font-size:15px;
+}
+
+.button__icon {
+    margin-left: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+
+  /* model */
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
