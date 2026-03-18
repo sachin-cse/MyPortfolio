@@ -23,6 +23,10 @@
           sans-serif;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         background: #f5f6fa;
         color: #333;
@@ -84,6 +88,64 @@
         color: #007bff;
       }
 
+      .nav__toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #333;
+      }
+
+      .nav__toggle-icon-open {
+        display: block;
+      }
+
+      .nav__toggle-icon-close {
+        display: none;
+      }
+
+      .nav__toggle.active .nav__toggle-icon-open {
+        display: none;
+      }
+
+      .nav__toggle.active .nav__toggle-icon-close {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .nav__toggle {
+          display: block;
+        }
+
+        .nav__list {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background: #fff;
+          flex-direction: column;
+          gap: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav__list.active {
+          max-height: 500px;
+        }
+
+        .nav__list li {
+          padding: 15px 20px;
+          border-bottom: 1px solid #f0f0f0;
+        }
+
+        .nav__list li:last-child {
+          border-bottom: none;
+        }
+      }
+
       /* HOME */
 
       .home {
@@ -133,10 +195,120 @@
         text-decoration: none;
         display: inline-block;
         margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
       }
 
       .button:hover {
         background: #0056b3;
+      }
+
+      /* BUTTON GROUP */
+      .button-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .button-secondary {
+        background: #6c757d;
+      }
+
+      .button-secondary:hover {
+        background: #5a6268;
+      }
+
+      /* MODAL */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        animation: fadeIn 0.3s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 90%;
+        max-width: 900px;
+        max-height: 85vh;
+        overflow: auto;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.3s ease-in;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 15px;
+      }
+
+      .modal-header h2 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .modal-close {
+        font-size: 32px;
+        font-weight: bold;
+        color: #aaa;
+        cursor: pointer;
+        transition: color 0.3s;
+        background: none;
+        border: none;
+      }
+
+      .modal-close:hover {
+        color: #000;
+      }
+
+      .modal-body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .modal-body iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 8px;
       }
 
       /* ABOUT */
@@ -146,6 +318,10 @@
         grid-template-columns: 300px 1fr;
         align-items: center;
         gap: 40px;
+      }
+
+      .about__container > div:last-child {
+        text-align: center;
       }
 
       .about img {
@@ -241,6 +417,76 @@
         text-align: center;
       }
 
+      /* CTA SECTION */
+      .cta {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      .cta__content {
+        max-width: 700px;
+        margin: auto;
+      }
+
+      .cta h2 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .cta p {
+        font-size: 18px;
+        color: #4a5568;
+        margin-bottom: 40px;
+        line-height: 1.8;
+      }
+
+      .cta__buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta .button {
+        font-size: 16px;
+        padding: 15px 35px;
+      }
+
+      /* BACK TO TOP BUTTON */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 24px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        transition: all 0.3s ease;
+        z-index: 99;
+      }
+
+      .back-to-top.show {
+        display: flex;
+      }
+
+      .back-to-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+      }
+
+      .back-to-top:active {
+        transform: translateY(-2px);
+      }
+
       /* RESPONSIVE */
 
       @media (max-width: 768px) {
@@ -254,6 +500,10 @@
           text-align: center;
         }
 
+        .about__container > div:last-child {
+          text-align: center;
+        }
+
         .skills__container {
           grid-template-columns: 1fr;
         }
@@ -262,8 +512,28 @@
           grid-template-columns: 1fr;
         }
 
-        .nav__list {
-          display: none;
+        .cta h2 {
+          font-size: 28px;
+        }
+
+        .cta__buttons {
+          flex-direction: row;
+          gap: 15px;
+        }
+
+        .cta .button {
+          flex: 1;
+          min-width: 150px;
+          font-size: 14px;
+          padding: 12px 20px;
+        }
+
+        .back-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 45px;
+          height: 45px;
+          font-size: 20px;
         }
       }
     </style>
@@ -284,6 +554,11 @@
           <li><a href="#projects" class="nav__link">Projects</a></li>
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
+
+        <button class="nav__toggle" id="navToggle">
+          <i class="uil uil-bars nav__toggle-icon-open"></i>
+          <i class="uil uil-times nav__toggle-icon-close"></i>
+        </button>
       </div>
     </header>
 
@@ -342,16 +617,21 @@
 
           <br />
 
-          <a href="./statics/assets/Sachin Mandal Resume.pdf" class="button"
-            >Download CV</a
-          >
+          <div class="button-group">
+            <a href="./statics/assets/Sachin Mandal Resume.pdf" class="button" download>
+              <i class="uil uil-download-alt"></i> Download CV
+            </a>
+            <button class="button button-secondary" id="viewCvBtn">
+              <i class="uil uil-eye"></i> View CV
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
 
-    <section class="container" id="skills">
+    <section class="container" id="skills"><br>
       <h2>Skills</h2>
 
       <div class="skills__container">
@@ -384,7 +664,7 @@
 
     <!-- EXPERIENCE -->
 
-    <section class="container" id="experience">
+    <section class="container" id="experience"><br>
       <h2>Experience</h2>
 
       <div class="timeline">
@@ -474,9 +754,22 @@
       </div>
     </section>
 
+    <!-- CTA SECTION -->
+
+    <section class="cta" id="cta">
+      <div class="cta__content">
+        <h2>Ready to Work Together?</h2>
+        <p>Let's create something amazing! I'm available for freelance projects and full-time opportunities. Get in touch and let's discuss how I can help bring your ideas to life.</p>
+        <div class="cta__buttons">
+          <a href="#contact" class="button"><i class="uil uil-message"></i> Send Message</a>
+          <a href="./statics/assets/Sachin Mandal Resume.pdf" class="button button-secondary" download><i class="uil uil-download-alt"></i> Get My CV</a>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
 
-    <section class="container" id="contact">
+    <section class="container" id="contact"><br>
       <h2>Contact Me</h2>
 
       <div class="contact__info">
@@ -523,5 +816,90 @@
         Sachin Mandal | Backend Developer
       </p>
     </footer>
+
+    <!-- CV MODAL -->
+    <div class="modal" id="cvModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>My CV</h2>
+          <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <iframe src="./statics/assets/Sachin Mandal Resume.pdf#toolbar=1&navpanes=0&scrollbar=1" title="CV"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTop" title="Back to top">
+      <i class="uil uil-arrow-up"></i>
+    </button>
+
+    <script>
+      // Hamburger menu toggle
+      const navToggle = document.getElementById('navToggle');
+      const navList = document.querySelector('.nav__list');
+
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        navToggle.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const navLinks = document.querySelectorAll('.nav__link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navList.classList.remove('active');
+          navToggle.classList.remove('active');
+        });
+      });
+
+      // CV Modal functionality
+      const cvModal = document.getElementById('cvModal');
+      const viewCvBtn = document.getElementById('viewCvBtn');
+      const closeModal = document.getElementById('closeModal');
+
+      // Open modal when View CV is clicked
+      viewCvBtn.addEventListener('click', () => {
+        cvModal.classList.add('active');
+      });
+
+      // Close modal when close button is clicked
+      closeModal.addEventListener('click', () => {
+        cvModal.classList.remove('active');
+      });
+
+      // Close modal when clicking outside the modal content
+      cvModal.addEventListener('click', (e) => {
+        if (e.target === cvModal) {
+          cvModal.classList.remove('active');
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+          cvModal.classList.remove('active');
+        }
+      });
+
+      // Back to top button functionality
+      const backToTopBtn = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
   </body>
 </html>
