@@ -82,10 +82,27 @@
         text-decoration: none;
         color: #333;
         font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
       }
 
       .nav__link:hover {
         color: #007bff;
+      }
+
+      .nav__link.active {
+        color: #007bff;
+        font-weight: 600;
+      }
+
+      .nav__link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #007bff;
       }
 
       .nav__toggle {
@@ -839,6 +856,7 @@
       // Hamburger menu toggle
       const navToggle = document.getElementById('navToggle');
       const navList = document.querySelector('.nav__list');
+      const navLinks = document.querySelectorAll('.nav__link');
 
       navToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
@@ -846,9 +864,70 @@
       });
 
       // Close menu when a link is clicked
-      const navLinks = document.querySelectorAll('.nav__link');
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
+          navList.classList.remove('active');
+          navToggle.classList.remove('active');
+        });
+      });
+
+      // Set active menu based on scroll position
+      let scrollTimeout;
+
+      function updateActiveMenuOnScroll() {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + 200;
+
+        let closestSection = null;
+        let closestDistance = Infinity;
+
+        for (let section of sections) {
+          const sectionTop = section.offsetTop;
+          const distance = Math.abs(sectionTop - scrollPosition);
+          
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = section;
+          }
+        }
+
+        if (closestSection) {
+          const id = closestSection.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+          });
+          const activeLink = document.querySelector(`.nav__link[href="#${id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      }
+
+      // Set Home as active on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+        });
+        const homeLink = document.querySelector('.nav__link[href="#home"]');
+        if (homeLink) {
+          homeLink.classList.add('active');
+        }
+      });
+
+      // Update active menu on scroll with debounce
+      window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          updateActiveMenuOnScroll();
+        }, 150);
+      });
+
+      // Handle nav link clicks
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+          
           navList.classList.remove('active');
           navToggle.classList.remove('active');
         });
